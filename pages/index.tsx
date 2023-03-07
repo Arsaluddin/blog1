@@ -2,11 +2,20 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-// import '../styles/example.css';
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const router = useRouter();
+
+  //  const handleClick = (e,path) => {
+  //      e.preventDefault()
+  //      router.push(path);
+  //  }
+
   return (
     <>
       {/* <Head>
@@ -119,7 +128,20 @@ export default function Home() {
           </a>
         </div>
       </main> */}
-      <h1>Arsal you can do it</h1>
+      <div className={styles.navbar}>
+        <div>
+           <h3>About</h3>
+        </div>
+        <div>
+           <h3>Carrier</h3>
+        </div>
+        <div>
+           <h3>project</h3>
+        </div>
+        <div>
+          <h3>Contact</h3>
+        </div>
+      </div>
     </>
   )
 }
